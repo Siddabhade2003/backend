@@ -17,12 +17,12 @@ public class CourseInstance {
     private int semester;
 
     @ManyToOne
-    private Course course; // Reference to Course entity
+    private Course course; 
 
-    // Default constructor
+    
     public CourseInstance() {}
 
-    // Parameterized constructor
+    
     public CourseInstance(Long id, int year, int semester, Course course) {
         this.id = id;
         this.year = year;
@@ -30,7 +30,7 @@ public class CourseInstance {
         this.course = course;
     }
 
-    // Getters and setters
+   
     public Long getId() {
         return id;
     }
@@ -63,7 +63,7 @@ public class CourseInstance {
         this.course = course;
     }
 
-    // Add method to get course title
+    
     public String getCourseTitle() {
         return course != null ? course.getTitle() : null;
     }

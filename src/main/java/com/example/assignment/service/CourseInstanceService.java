@@ -32,8 +32,8 @@ public class CourseInstanceService {
         Optional<CourseInstance> instance = courseInstanceRepository.findByYearAndSemesterAndCourseId(year, semester, courseId);
         if (instance.isPresent()) {
             courseInstanceRepository.delete(instance.get());
-            return true; // Successfully deleted
+            return true; 
         }
-        return false; // Not found
+        return false; 
     }
 }
